@@ -15,7 +15,7 @@ Puis ouvrir http://127.0.0.1:3000. Les tests se lancent avec `npm test`.
 
 ## Les modules de `public/js`
 
-`brain.js` contient les règles, sans accès à la page : `validateMessage` accepte ou refuse un message, `replyTo` choisit la réponse.
+`brain.js` contient les règles, sans accès à la page : `validateMessage` accepte ou refuse un message, `replyTo` choisit la réponse, `estEnMajuscules` dit si un message est écrit en majuscules.
 
 `view.js` affiche la conversation, en texte uniquement.
 
