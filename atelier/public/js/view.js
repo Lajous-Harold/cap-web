@@ -3,8 +3,10 @@
 export function renderMessages(messages, container) {
   const lignes = messages.map((msg) => {
     const li = document.createElement('li');
-    const nom = msg.role === 'user' ? 'Vous' : 'Cap Web';
-    li.innerHTML = `<strong>${nom}</strong> : ${msg.text}`;
+    const nom = document.createElement('strong');
+    nom.textContent = msg.role === 'user' ? 'Vous' : 'Cap Web';
+    // append avec une chaîne crée un nœud texte : le message reste du texte.
+    li.append(nom, ` : ${msg.text}`);
     if (msg.role === 'assistant') {
       li.classList.add('bot');
     }
