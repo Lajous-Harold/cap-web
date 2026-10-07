@@ -62,3 +62,8 @@ export function estEnMajuscules(message) {
   }
   return lettres.every((lettre) => lettre === lettre.toUpperCase() && lettre !== lettre.toLowerCase());
 }
+
+// Vrai si m a la forme d'un message de l'historique : un objet avec un rôle connu et un texte.
+export function estMessage(m) {
+  return typeof m === 'object' && m !== null && (m.role === 'user' || m.role === 'assistant') && typeof m.text === 'string';
+}
