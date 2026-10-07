@@ -74,6 +74,14 @@ formulaire.addEventListener('submit', async (event) => {
 
 champ.addEventListener('input', mettreAJourCompteur);
 
+// Entrée envoie, Maj+Entrée va à la ligne ; requestSubmit passe par la même validation que le bouton.
+champ.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter' && !event.shiftKey) {
+    event.preventDefault();
+    formulaire.requestSubmit();
+  }
+});
+
 effacer.addEventListener('click', () => {
   if (!confirm('Effacer toute la conversation ?')) {
     return;
