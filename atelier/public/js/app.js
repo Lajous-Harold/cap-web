@@ -15,6 +15,7 @@ const CLE = 'capweb.historique';
 
 function mettreAJourCompteur() {
   compteur.textContent = `${champ.value.length} / ${LIMITE}`;
+  compteur.classList.toggle('alerte', champ.value.length >= LIMITE * 0.9);
 }
 const historique = [];
 
