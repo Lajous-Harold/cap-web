@@ -20,3 +20,20 @@ Puis ouvrir http://127.0.0.1:3000. Les tests se lancent avec `npm test`.
 `view.js` affiche la conversation, en texte uniquement.
 
 `app.js` relie la page aux deux modules, tient l'historique et l'enregistre dans le navigateur.
+
+## Arborescence
+
+```text
+atelier/
+  public/               la page servie au navigateur
+    index.html          structure de la page
+    styles.css          mise en forme, version mobile comprise
+    js/brain.js         règles de réponse, sans accès à la page
+    js/view.js          affichage de la conversation
+    js/app.js           relie la page, les règles, l'affichage et le serveur
+  server/
+    app.js              serveur local : fichiers publics, /version.json, /api/conseil
+    start.js            démarrage sur http://127.0.0.1:3000
+  tests/                tests lancés par npm test
+  cahier-personnel.json limite et mots du cahier personnel
+```
