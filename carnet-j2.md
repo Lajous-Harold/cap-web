@@ -89,3 +89,5 @@ Harold : je sais refuser un patch dont tous les tests sont verts, en montrant le
 ## J3 · Terminer Cap Web
 
 Étape 1, ma prédiction avant de toucher au code : avec un troisième mot, « aide » listera bien les trois mots, car la liste est calculée depuis `MOTS`, mais annoncera encore « deux mots », car ce nombre est écrit à la main dans la phrase. Vérifié : « … et deux mots à moi : « musique » et « cerise » et « compost » ». Après correction, le nombre vient de `Object.keys(MOTS).length` et « aide » annonce 3 mots.
+
+Étape 3, Lighthouse (Accessibilité seule) : score 100 avec le label. Sans la balise `label` du champ : score 95, alerte « Les éléments de formulaire ne sont pas associés à des libellés » (et une erreur rouge dans la console, car `#limite` était dans le label). Label remis. Au clavier seul : Tab va au champ, puis à Envoyer, puis à Effacer ; Entrée dans le champ ajoute une ligne au lieu d'envoyer, il faut Tab jusqu'à Envoyer puis Entrée, et le message part bien.
