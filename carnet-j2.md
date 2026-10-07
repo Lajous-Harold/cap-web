@@ -85,3 +85,7 @@ Pour aller plus loin : `abordage/mon-patch.patch` corrige le patch 2. Le contrat
 Chacun, une phrase : ce que vous savez faire ce soir et que vous ne saviez pas faire ce matin. Relisez votre positionnement : une notion est-elle passée de « à renforcer » à « à l'aise » ?
 
 Harold : je sais refuser un patch dont tous les tests sont verts, en montrant le fichier et la ligne qui affaiblissent le contrat ou qui réinjectent du HTML. « Tests » passe de « à renforcer » à « à l'aise » : test vu rouge pour la bonne raison, puis code, puis casse volontaire pour prouver que le test protège.
+
+## J3 · Terminer Cap Web
+
+Étape 1, ma prédiction avant de toucher au code : avec un troisième mot, « aide » listera bien les trois mots, car la liste est calculée depuis `MOTS`, mais annoncera encore « deux mots », car ce nombre est écrit à la main dans la phrase. Vérifié : « … et deux mots à moi : « musique » et « cerise » et « compost » ». Après correction, le nombre vient de `Object.keys(MOTS).length` et « aide » annonce 3 mots.

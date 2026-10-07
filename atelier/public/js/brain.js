@@ -5,14 +5,15 @@ export const LIMITE = 200;
 
 const MOTS = {
   musique: 'Vieux CD, vinyles ou écouteurs ne vont pas au bac jaune : confiez ces objets à une ressourcerie ou à la déchetterie.',
-  cerise: 'Noyaux et queues de cerise vont au compost, avec les autres déchets de cuisine.'
+  cerise: 'Noyaux et queues de cerise vont au compost, avec les autres déchets de cuisine.',
+  compost: 'Le compost accueille épluchures, marc de café et coquilles d’œufs, mais ni viande ni poisson.'
 };
 
 const liste = Object.keys(MOTS).map((mot) => `« ${mot} »`).join(' et ');
 
 const REPONSES = {
   salut: 'Bonjour ! Je suis Cap Web, un assistant à règles. Écrivez « aide » pour voir ce que je sais faire.',
-  aide: `Je connais « salut », « aide », « test », et deux mots à moi : ${liste}.`,
+  aide: `Je connais « salut », « aide », « test », et ${Object.keys(MOTS).length} mots à moi : ${liste}.`,
   test: 'Test bien reçu : mes règles fonctionnent.',
   repli: 'Je ne connais pas encore cette phrase. Écrivez « aide » pour voir les mots que je connais.'
 };
